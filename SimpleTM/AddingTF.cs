@@ -23,7 +23,7 @@ namespace SimpleTM
 
         public void FillTF()
         {
-            List<string> FileLines = File.ReadAllLines("D:\\CSharp\\SimpleTM\\SimpleTM\\matrix.txt", Encoding.Default).ToList();
+            List<string> FileLines = File.ReadAllLines("D:\\CSharp\\TMSimulation\\SimpleTM\\matrix.txt", Encoding.Default).ToList();
             foreach (string line in FileLines)
             {
                 if (line == FileLines[0]) continue;

@@ -8,12 +8,13 @@ namespace SimpleTM
 {
     public abstract class HandlingTF
     {
+        // TM = O(transitionFunctions.Count * input.Length)
         public void ReadInput(char[] input, string initialState, int curPosition, IList<TransitionFunction> transitionFunctions)
         {
             string direction = string.Empty;
             string state = initialState;
             int count = 1;
-            while (direction != "E" || curPosition > input.Length)
+            while (direction != "E" && curPosition < input.Length)
             {
                 foreach (TransitionFunction func in transitionFunctions)
                 {
